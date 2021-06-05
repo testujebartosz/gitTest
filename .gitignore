@@ -1,10 +1,4 @@
 /.idea/
 javat.iml
-/out/production/javat/CustomScanner.class
-/out/production/javat/HelloWorld.class
-/out/production/javat/InkrementacjaDekrementacja.class
-/out/production/javat/OperatoryMatematyczne.class
-/out/production/javat/TypyObiektowe.class
-/out/production/javat/TypyProsteRef.class
-/out/production/javat/Zmienne.class
-/out/production/javat/Calculator.class
+/out/
+
