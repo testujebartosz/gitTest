@@ -1,0 +1,10 @@
+public class PętlaWhile {
+    public static void main(String[] args) {
+        int number = 0;
+        while(number<20){
+            System.out.println("Moja wartość to: " +number+ " i jest mniejsza od 20");
+            number++;
+        }
+        System.out.println("Koniec pętli");
+    }
+}
