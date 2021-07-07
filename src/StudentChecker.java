@@ -28,8 +28,18 @@ public class StudentChecker {
         thirdStudent.email = "karolagrest@gmail.com";
         thirdStudent.numerIndeksu = 3;
 
-        String[] students = new String[3];
-        students[0] = firstStudent.imie;
+        Student[] students = new Student[3];
+        students[0] = firstStudent;
+        students[1] = secondStudent;
+        students[2] = thirdStudent;
+
+        for ( int i = 0; i < students.length; i++ ){
+            students[i].przedstawSie();
+            students[i].podajEmail();
+            students[i].podajNrIndeksu();
+            students[i].zalogujSie();
+            System.out.println();
+        }
 
 
 
