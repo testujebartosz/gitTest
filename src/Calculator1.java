@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Calculator {
+public class Calculator1 {
 
     //napisz program który poprosi użytkownika o 2 liczby, a następnie wykona na nich  podstawowe operacje matematyczne
     public static void main(String[] args) {
