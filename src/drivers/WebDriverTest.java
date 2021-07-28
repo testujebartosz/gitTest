@@ -5,7 +5,14 @@ public class WebDriverTest {
 
         //ChromeDriver chrome = new ChromeDriver();
 
-        WebDriver driver = getDriver("firefoxa");
+        //przechodzimy po wszsytkich wartościach które znajdują się w Enumie
+        DriverType[] driverTypes = DriverType.values();
+        for (int i = 0; i < driverTypes.length; i++){
+            System.out.println(driverTypes[i].name);
+            System.out.println(driverTypes[i].path);
+        }
+
+        WebDriver driver = getDriver(DriverType.FIREFOX);
 
         driver.get();
         driver.info();
@@ -24,15 +31,15 @@ public class WebDriverTest {
     }
 
 // dzięki polimorfizomowi kod jest bardziej elastyczny
-    private static WebDriver getDriver(String name) throws NoValidBrowserName {
-        if(name.equals("chrome")){
+ /*   private static WebDriver getDriver(DriverType type) throws NoValidBrowserName {
+        if(type==DriverType.CHROME){
             return new ChromeDriver();
-        } else if (name.equals("firefox")){
+        } else if (type==DriverType.FIREFOX){
             return new FirefoxDriver();
         }
         throw new NoValidBrowserName("No valid browser name. ");
         //return null;
-    }
+    }*/
 
     /*private static WebDriver getDriver(String name) {
         if (name.equals("chrome")) {
@@ -47,4 +54,14 @@ public class WebDriverTest {
         }
         return null;
     }*/
-}
+
+    private static WebDriver getDriver(DriverType type) {
+        if (type.name.equals("chrome")) {
+            System.out.println(type.path);
+            return new ChromeDriver();
+        }
+            System.out.println(type.path);
+            return new FirefoxDriver();
+
+        }
+    }
